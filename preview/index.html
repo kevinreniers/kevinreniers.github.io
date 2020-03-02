@@ -1,0 +1,10 @@
+---
+layout: default
+title: My Drafts
+---
+<h1>{{ page.title }}</h1>
+<ul class="posts">
+    {% for draft in site.drafts %}
+    <li><span>{{ draft.date | date_to_string }}</span> - <a href="{{ draft.url }}" title="{{ draft.title }}">{{ draft.title }}</a></li>
+    {% endfor %}
+</ul>
